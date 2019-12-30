@@ -21,6 +21,9 @@
     <!-- Custom styles for this template -->
     <link href="css/grayscale.min.css" rel="stylesheet">
 
+    <!--Progressive Image Loading-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.css">
+
   </head>
 
   <body id="page-top">
@@ -69,13 +72,17 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2 class="text-white mb-4">About me</h2>
-            <p class="text-white-50">Graduate in Software Engineering from <a href="https://www.mmu.edu.my/fci/">Faculty of Computing & Informatics, Multimedia University, Cyberjaya, Malaysia</a> with about 1 year of professional experience in developing ERP & Cross-platform applications using HTML, CSS, JS, Laravel, VueJs, Python, Odoo. <br>
-            Currently, I'm working at <a href="http://www.bayemporium-bd.com/"> Bay Emporium Ltd.</a> as Jr. Software Engineer on <a href="https://www.amarbay.com/">E-commerce, ERP software</a> & a (possible) React Native mobile app built on Odoo 10. For more visit my main portfolio website built using Laravel and Vue.js or
-              <a href="http://aqeeb-imtiaz-harun.herokuapp.com/resume"> download my CV.</a></p>
+            <p class="text-white-50" style="margin-bottom: 1rem;">
+              Graduate in Software Engineering from <a href="https://www.mmu.edu.my/fci/">Faculty of Computing & Informatics, Multimedia University, Cyberjaya, Malaysia</a> with about 1 year of professional experience in developing ERP & Cross-platform applications using HTML, CSS, JS, Laravel, VueJs, Python, Odoo.
+            </p>
+            <p class="text-white-50">
+              Currently, I'm working at <a href="http://www.bayemporium-bd.com/"> Bay Emporium Ltd.</a> as Jr. Software Engineer on <a href="https://www.amarbay.com/">E-commerce, ERP software</a> & a (possible) React Native mobile app built on Odoo 10. For more visit my main portfolio website built using Laravel and Vue.js or
+                <a href="http://aqeeb-imtiaz-harun.herokuapp.com/resume"> download my CV.</a>
+            </p>
               <a href="http://aqeeb-imtiaz-harun.herokuapp.com/" class="btn btn-secondary js-scroll-trigger">Portfolio Website</a>
           </div>
         </div>
-        
+
         <br>
 
         <a href="#projects" class="btn btn-primary js-scroll-trigger"><i class="fas fa-angle-down"></i> Projects</a>
@@ -93,7 +100,10 @@
         <!-- Featured Project Row -->
         <div class="row align-items-center no-gutters mb-4 mb-lg-5">
           <div class="col-xl-8 col-lg-7">
-            <img class="img-fluid mb-3 mb-lg-0" src="img/projects/aqeeb_cool_blog.JPG" alt="">
+            <a href="img/projects/aqeeb_cool_blog.JPG" class="progressive replace">
+              <img src="img/projects/aqeeb_cool_blog_preview.JPG" class="img-fluid mb-3 mb-lg-0 preview" alt="project1" />
+            </a>
+            <!-- <img loading="lazy" class="img-fluid mb-3 mb-lg-0" src="img/projects/aqeeb_cool_blog.JPG" alt=""> -->
           </div>
           <div class="col-xl-4 col-lg-5">
             <div class="featured-text text-center text-lg-left">
@@ -106,7 +116,10 @@
         <!-- Project One Row -->
         <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
           <div class="col-lg-6">
-            <img class="img-fluid" src="img/projects/basic_tasks_app.JPG" alt="">
+            <a href="img/projects/basic_tasks_app.JPG" class="progressive replace">
+              <img src="img/projects/basic_tasks_app_preview.JPG" class="img-fluid mb-3 mb-lg-0 preview" alt="project2" />
+            </a>
+            <!-- <img loading="lazy" class="img-fluid" src="img/projects/basic_tasks_app.JPG" alt=""> -->
           </div>
           <div class="col-lg-6">
             <div class="bg-black text-center h-100 project">
@@ -235,14 +248,17 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script defer src="vendor/jquery/jquery.min.js"></script>
+    <script defer src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script defer src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/grayscale.min.js"></script>
+    <script defer src="js/grayscale.min.js"></script>
+
+    <!--Progressive Image Loading-->
+    <script defer src="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.js"></script>
 
   </body>
 
