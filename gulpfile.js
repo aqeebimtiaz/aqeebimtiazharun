@@ -4,7 +4,7 @@ var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
-var autoprefixer = require('gulp-autoprefixer');
+// var autoprefixer = require('gulp-autoprefixer');
 var pkg = require('./package.json');
 var browserSync = require('browser-sync').create();
 
@@ -55,10 +55,10 @@ gulp.task('css:compile', function() {
     .pipe(sass.sync({
       outputStyle: 'expanded'
     }).on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
+    // .pipe(autoprefixer({
+    //   browsers: ['last 2 versions'],
+    //   cascade: false
+    // }))
     .pipe(header(banner, {
       pkg: pkg
     }))
