@@ -39,4 +39,24 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
+  // Enabling automatically copying email when clicking copy button.
+  // Showing a popover when copy to clipboard is completed.
+  $('#copyEmail').click(() => {
+    navigator.clipboard.writeText('aqeebimtiaz@gmail.com')
+      .then(res => {
+        $('#copyEmail').popover({
+          "content": "Copied!",
+          "placement": "bottom"
+        });
+        tmp = setTimeout(function(){$('.popover').popover('hide')}, 1000);
+      })
+  });
+
+  // Dismiss all popovers by clicking outside
+  $('html').on('click', function(e) {
+    if (typeof $(e.target).data('original-title') == 'undefined') {
+      $('[data-original-title]').popover('hide');
+    }
+  });
+
 })(jQuery); // End of use strict
