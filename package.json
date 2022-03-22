@@ -40,5 +40,10 @@
         "gulp-rename": "1.4.0",
         "gulp-sass": "4.0.1",
         "gulp-uglify": "3.0.1"
-    }
+    },
+    "browserslist": [
+        "defaults",
+        "not IE 11",
+        "maintained node versions"
+    ]
 }
