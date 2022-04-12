@@ -41,14 +41,16 @@
 
   // Enabling automatically copying email when clicking copy button.
   // Showing a popover when copy to clipboard is completed.
-  $('#copyEmail').click(() => {
+  let copyEmailBtn = $('#copyEmail');
+  copyEmailBtn.popover({
+    "content": "Copied!",
+    "placement": "bottom"
+  });
+  copyEmailBtn.click(() => {
     navigator.clipboard.writeText('aqeebimtiaz@gmail.com')
       .then(res => {
-        $('#copyEmail').popover({
-          "content": "Copied!",
-          "placement": "bottom"
-        });
-        tmp = setTimeout(function(){$('.popover').popover('hide')}, 1000);
+        $('.popover').popover('show');
+        setTimeout(function(){$('.popover').popover('hide')}, 1000);
       })
   });
 
