@@ -4,4 +4,7 @@
   p {
     margin-bottom: 5rem;
   }
+  @media (min-width: 992px) {
+    padding: 10rem 0;
+  }
 }

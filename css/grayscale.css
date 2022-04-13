@@ -171,6 +171,12 @@
   margin-bottom: 5rem;
 }
 
+@media (min-width: 992px) {
+  .about-section {
+    padding: 10rem 0;
+  }
+}
+
 .projects-section {
   padding: 10rem 0;
 }
