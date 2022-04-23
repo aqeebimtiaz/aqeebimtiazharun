@@ -21,12 +21,52 @@
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/grayscale.min.css" rel="stylesheet">
-
     <!--Progressive Image Loading-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.css">
 
+    <!--Swiper Slider-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+
+    <style>
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
   </head>
 
   <body id="page-top">
@@ -106,10 +146,35 @@
         <!-- Featured Project Row -->
         <div class="row align-items-center no-gutters mb-4 mb-lg-5">
           <div class="col-xl-8 col-lg-7">
-            <a href="img/projects/OdooLauncher-Electron_reduced.gif" class="progressive replace">
+            <!-- <a href="img/projects/OdooLauncher-Electron_reduced.gif" class="progressive replace">
               <img src="img/projects/OdooLauncher-Electron_preview.png" class="img-fluid mb-3 mb-lg-0 preview" alt="project1" />
-            </a>
+            </a> -->
             <!-- <img loading="lazy" class="img-fluid mb-3 mb-lg-0" src="img/projects/aqeeb_cool_blog.JPG" alt=""> -->
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="img/projects/OdooLauncher-Electron.png" class="progressive replace">
+                    <img src="img/projects/OdooLauncher-Electron_preview.png" class="img-fluid mb-3 mb-lg-0 preview" alt="project1" />
+                  </a>
+                  <p>Vanilla JS</p>
+                </div>
+                <div class="swiper-slide">
+                  <a href="img/projects/OdooLauncher-ElectronReact.png" class="progressive replace">
+                    <img src="img/projects/OdooLauncher-ElectronReact-preview.png" class="img-fluid mb-3 mb-lg-0 preview" alt="project1" />
+                  </a>
+                  <p>React JS</p>
+                </div>
+                <div class="swiper-slide">
+                  <a href="img/projects/OdooLauncher-Electron_reduced.gif" class="progressive replace">
+                    <img src="img/projects/OdooLauncher-Electron_preview.png" class="img-fluid mb-3 mb-lg-0 preview" alt="project1" />
+                  </a>
+                </div>
+                <!-- <div class="swiper-slide">Demo Slide</div> -->
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
           </div>
           <div class="col-xl-4 col-lg-5">
             <div class="featured-text text-center text-lg-left">
@@ -267,6 +332,22 @@
 
     <!--Progressive Image Loading-->
     <script defer src="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.js"></script>
+
+    <!--Swiper Slider-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
+    </script>
 
   </body>
 
