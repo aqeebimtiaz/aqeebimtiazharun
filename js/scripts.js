@@ -1,8 +1,8 @@
 /*!
-* Start Bootstrap - Grayscale v7.0.5 (https://startbootstrap.com/theme/grayscale)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
-*/
+ * Start Bootstrap - Grayscale v7.0.5 (https://startbootstrap.com/theme/grayscale)
+ * Copyright 2013-2022 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
+ */
 //
 // Scripts
 // 
@@ -49,6 +49,29 @@ window.addEventListener('DOMContentLoaded', event => {
                 navbarToggler.click();
             }
         });
+    });
+
+    // Enabling automatically copying email when clicking copy button.
+    // Showing a popover when copy to clipboard is completed.
+    let copyEmailBtn = document.getElementById('copyEmail');
+
+    new bootstrap.Popover(document.querySelector('[data-bs-toggle]'), {
+        placement: 'bottom',
+        trigger: 'focus',
+        html: true
+    });
+
+    //get instance
+    let popover_instance = bootstrap.Popover.getInstance(document.querySelector('[data-bs-toggle]'));
+
+    copyEmailBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText('aqeebimtiaz@gmail.com')
+            .then(res => {
+                popover_instance.show();
+                setTimeout(function () {
+                    popover_instance.hide();
+                }, 1000);
+            });
     });
 
 });
